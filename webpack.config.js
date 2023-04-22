@@ -1,8 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { postcss } = require('autoprefixer');
 const webpack = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 
 
 module.exports = {
@@ -24,7 +27,11 @@ module.exports = {
             writeToDisk: true,
         },
     },
-    
+    optimization: {
+        minimizer: [
+            new CssMinimizerPlugin(),
+        ],
+    },
     module: {
         rules: [
             {
@@ -55,12 +62,33 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+                exclude: [
+                    path.resolve(__dirname, './src/fonts'),
+                ],
+                generator: {
+                    filename: 'images/[name].[ext]',
+                },
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
+                type: 'asset/resource',
+                exclude: [
+                    path.resolve(__dirname, './src/images'),
+                ],
+                generator: {
+                    filename: 'fonts/[name].[ext]',
+                },
+            },
         ],
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/main.css',
         }),
+        new CleanWebpackPlugin(),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
