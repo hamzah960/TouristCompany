@@ -67,9 +67,21 @@ module.exports = {
                 type: 'asset/resource',
                 exclude: [
                     path.resolve(__dirname, './src/fonts'),
+                    path.resolve(__dirname, './src/video'),
                 ],
                 generator: {
                     filename: 'images/[name].[ext]',
+                },
+            },
+            {
+                test: /\.(mp4)$/i,
+                type: 'asset/resource',
+                exclude: [
+                    path.resolve(__dirname, './src/fonts'),
+                    path.resolve(__dirname, './src/images'),
+                ],
+                generator: {
+                    filename: 'video/[name].[ext]',
                 },
             },
             {
@@ -77,6 +89,7 @@ module.exports = {
                 type: 'asset/resource',
                 exclude: [
                     path.resolve(__dirname, './src/images'),
+                    path.resolve(__dirname, './src/video'),
                 ],
                 generator: {
                     filename: 'fonts/[name].[ext]',
@@ -96,6 +109,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'trip1.html',
+            template: './src/trip1.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'trip2.html',
+            template: './src/trip2.html',
         }),
     ]
 }

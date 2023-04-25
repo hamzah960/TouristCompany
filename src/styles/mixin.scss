@@ -1,0 +1,8 @@
+@mixin custom-btn($main-color, $secondary-color, $main-color-lighten) {
+    background-color: $main-color;
+    color: $secondary-color;
+    &:hover, &:focus {
+        background-color: $main-color-lighten;
+        color: $secondary-color;
+    }
+}
