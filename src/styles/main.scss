@@ -4,7 +4,7 @@
 @import './custom.scss';
 
 
-.navbar {
+nav#main-page{
     width: 96%;
     box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, .3);
     position: fixed;
@@ -79,6 +79,10 @@ header.main {
             font-weight: bold;
             font-size: 50px;
             margin-bottom: 35px;
+            color: $main-color;
+            &::after {
+                content: none;
+            }
         }
         p {
             line-height: 230%;

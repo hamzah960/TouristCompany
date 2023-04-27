@@ -5,24 +5,13 @@
 }
 
 .custom-heading {
-    position: relative;
-    text-align: center;
-    color: $main-color;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50%;
-        height: 1px;
-        background-color: #dddddd;
-    }
+    @include custom-heading($main-color);
 }
 p {
     color: $p-color;
+}
+a {
+    text-decoration: none;
 }
 
 section {
@@ -34,3 +23,4 @@ section {
 .custom-btn {
     @include custom-btn($main-color, $secondary-color, $main-color-lighten);
 }
+

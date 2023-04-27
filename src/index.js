@@ -9,9 +9,17 @@ import './styles/trip1.scss';
 $(function(){
     $(window).on('load scroll', function () {
         if($(window).scrollTop() > 30) {
-            $('.navbar').addClass('header-active');
+            $('#main-page').addClass('header-active');
         }else {
-            $('.navbar').removeClass('header-active');
+            $('#main-page').removeClass('header-active');
         }
     });
+});
+
+$('.product-small-image img').on('click', function () {
+    const bigImage = $('#big-image');
+    const smallImages = $('.product-small-image img');
+    smallImages.removeClass('active');
+    $(this).addClass('active');
+    bigImage.attr("src", this.src);
 });
