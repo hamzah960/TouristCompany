@@ -117,5 +117,13 @@ module.exports = {
             filename: 'trip2.html',
             template: './src/trip2.html',
         }),
+        new HtmlWebpackPlugin({
+            filename: 'register.html',
+            template: './src/register.html',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'login.html',
+            template: './src/login.html',
+        }),
     ]
 }

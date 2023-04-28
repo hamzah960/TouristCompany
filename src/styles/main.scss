@@ -5,17 +5,15 @@
 
 
 nav#main-page{
+    @include navbar;
     width: 96%;
-    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, .3);
     position: fixed;
-    background-color: rgb(255 255 255 / 93%);
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px;
     transition: 0.2s linear;
     z-index: 10;
-    padding: 10px 8px;
     a.navbar-brand {
         font-size: 23px;
         font-weight: bold;

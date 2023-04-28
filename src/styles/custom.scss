@@ -2,6 +2,7 @@
     width: 100% !important;
     border-radius: 0 !important;
     top: 0 !important;
+    background-color: #fff !important;
 }
 
 .custom-heading {
@@ -25,4 +26,5 @@ section {
 .custom-btn {
     @include custom-btn($main-color, $secondary-color, $main-color-lighten);
 }
+
 
