@@ -3,16 +3,60 @@
 $main-color: #00bef9;
 $secondary-color: #fff;
 $main-color-lighten: lighten($main-color, 7%);
-$p-color: #5d5d5d;
 
-p {
-    color: $p-color;
+
+header.trip.trip1 {
+    background-image: url(../images/tur6.jpg);
+    .box {
+        a , h1 {
+            color: $secondary-color;
+        }
+    }
+    &::before {
+        background-color: $main-color;
+    }
 }
 
-header.trip1 {
+section#description.trip1 {
+    h1 {
+        color: $main-color;
+    }
+    background-color: rgba($main-color, 8%);
+    .description-text {
+    }    
+}
+
+section#gallery.trip1 {
+    h1 {
+        color: $main-color;
+    }
+    .product {
+        .product-small-image {
+            img {
+                &:hover {
+                    cursor: pointer;
+                }
+                &.active {
+                    border: solid 4px $main-color;
+                }
+            }
+        }
+    }
+}
+
+footer.trip1 {
+    background-color: $main-color;
+    .footer {
+        color: $secondary-color;
+        .social svg {
+            color: $secondary-color;
+        }
+    }
+}
+
+header.trip {
     width: 100%;
     height: 35vh;
-    background-image: url(../images/tur6.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,7 +69,6 @@ header.trip1 {
             align-items: center;
             padding: 30px 5%;
             a {
-                color: $secondary-color;
                 font-weight: bold;
                 font-size: 20px;
                 img {
@@ -35,7 +78,6 @@ header.trip1 {
             }
         }
         h1 {
-            color: $secondary-color;
             text-align: center;
             font-weight: bold;
             transform: translateY(-20px);
@@ -51,15 +93,12 @@ header.trip1 {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $main-color;
         opacity: 0.3;
     }
 }
 
 section#description {
-    background-color: #00bef914;
     overflow: hidden;
-
     .description-text {
         h6, p {
             line-height: 1.8;
@@ -101,7 +140,6 @@ section#gallery {
                 &.active {
                     transform: scale(0.9);
                     filter: none;
-                    border: solid 4px #118ab2;
                 }
             }
         }

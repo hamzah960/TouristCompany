@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-free/js/all.min";
 import "jquery/dist/jquery.min.js";
 import './styles/main.scss';
 import './styles/trip1.scss';
+import './styles/trip2.scss';
 
 
 $(function(){
@@ -21,5 +22,5 @@ $('.product-small-image img').on('click', function () {
     const smallImages = $('.product-small-image img');
     smallImages.removeClass('active');
     $(this).addClass('active');
-    bigImage.attr("src", this.src);
+    bigImage.attr("src", (this).src);
 });

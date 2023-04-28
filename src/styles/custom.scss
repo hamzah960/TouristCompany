@@ -7,9 +7,11 @@
 .custom-heading {
     @include custom-heading($main-color);
 }
+
 p {
-    color: $p-color;
+    color: #5d5d5d;
 }
+
 a {
     text-decoration: none;
 }

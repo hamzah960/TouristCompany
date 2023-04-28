@@ -1,0 +1,58 @@
+@import './mixin.scss';
+
+$main-color: #F6514C;
+$secondary-color: #FFD9CE;
+$main-color-lighten: lighten($main-color, 7%);
+
+
+header.trip.trip2 {
+    background-image: url(../images/egy2.jpg);
+    .box {
+        a , h1 {
+            color: $secondary-color;
+        }
+    }
+    &::before {
+        background-color: $main-color;
+    }
+}
+
+section#description.trip2 {
+    background-color: rgba($main-color, 8%);
+    h1 {
+        color: $main-color;
+    } 
+}
+
+section#gallery.trip2 {
+    h1 {
+        color: $main-color;
+    }
+    .product {
+        .product-small-image {
+            img {
+                &:hover {
+                    cursor: pointer;
+                }
+                &.active {
+                    border: solid 4px $main-color;
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    @include custom-heading($main-color);
+}
+
+
+footer.trip2 {
+    background-color: $main-color;
+    .footer {
+        color: $secondary-color;
+        .social svg {
+            color: $secondary-color;
+        }
+    }
+}
