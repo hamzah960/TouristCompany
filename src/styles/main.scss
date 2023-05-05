@@ -13,7 +13,7 @@ nav#main-page{
     transform: translateX(-50%);
     border-radius: 5px;
     transition: 0.2s linear;
-    z-index: 10;
+    z-index: 13;
     a.navbar-brand {
         font-size: 23px;
         font-weight: bold;
@@ -66,28 +66,25 @@ header.main {
         width: 100%;
         height: 100%;
     }
-    .about-us {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        color: $main-color;
-        z-index: 7;
-        width: 80%;
-        h1 {
-            font-weight: bold;
-            font-size: 50px;
-            margin-bottom: 35px;
-            color: $main-color;
-            &::after {
-                content: none;
+    #carousel-about-us {
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .carousel-inner {
+            text-align: center;
+            .carousel-item {
+                font-size: 30px;
+                padding: 0 10%;
+                color: $main-color;
             }
         }
-        p {
-            line-height: 230%;
-            font-weight: bold;
-            font-size: 18px;
+        button {
+            svg {
+                font-size: 50px;
+            }
         }
     }
     &::before {
@@ -107,20 +104,35 @@ header.main {
 section#services {
     background-color: rgba(11,60,73,0.07);
     .card {
-        padding: 20px 50px;
+        padding: 20px 40px;
         margin-bottom: 20px;
-        height: 300px;
+        height: 350px;
+        transition: all 0.5s ease;
         h2 {
             margin-bottom: 15px;
             color: $secondary-color;
+            transition: inherit;
         }
         svg {
             color: $main-color;
             font-size: 65px;
             margin-bottom: 15px;
+            transition: inherit;
         }
         p {
             line-height: 1.8;
+            font-size: 18px;
+        }
+        &:hover {
+            border-color: $secondary-color;
+            transform: translateY(-5px);
+            cursor: pointer;
+            h2 {
+                color: $main-color;
+            }
+            svg {
+                color: $secondary-color;
+            }
         }
     }
 }
@@ -129,6 +141,13 @@ section#services {
 section#trips {
     .card {
         margin-bottom: 15px;
+        overflow: hidden;
+        .image {
+            overflow: hidden;
+            img {
+                transition: all 0.5s ease;
+            }
+        }
         .price {
             color: $main-color;
         }
@@ -137,6 +156,14 @@ section#trips {
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+        &:hover {
+            cursor: pointer;
+            border-color: $secondary-color;
+            img {
+
+                transform: scale(1.1);
+            }
         }
     }
 }

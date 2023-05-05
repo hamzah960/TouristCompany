@@ -1,0 +1,9 @@
+@import './mixin.scss';
+
+#trip1 {
+    @include trip (#00bef9, #fff, '../images/tur5.jpg');
+}
+
+#trip2 {
+    @include trip (#aac568, #49677a, '../images/egy2.jpg');
+}

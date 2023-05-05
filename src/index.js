@@ -3,8 +3,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "@fortawesome/fontawesome-free/js/all.min";
 import "jquery/dist/jquery.min.js";
 import './styles/main.scss';
-import './styles/trip1.scss';
-import './styles/trip2.scss';
+import './styles/trip.scss';
 import './styles/register.scss';
 
 

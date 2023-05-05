@@ -50,11 +50,28 @@
 
     <header class="main" id="header">
         <video src="./video/video.mp4" loop autoplay muted></video>
-        <div class="about-us">
-            <h1>لماذا نحن</h1>
-            <p>
-                الشركة السياحية الأفضل في الوطن العربي، هدفنا مساعدتك وتيسير أمورك، لا تتردد بالتواصل معنا فنحن هنا لنساعدك على إيجاد كل ما تحتاج له. إن كنت تبحث عن سكن أو جولة سياحية لتقضي أفضل الأوقات فقد وجدت طلبك
-            </p>
+
+        <div id="carousel-about-us" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    الشركة السياحية الأفضل في الوطن العربي
+                </div>
+                <div class="carousel-item">
+                    هدفنا مساعدتك وتيسير أمورك
+                </div>
+                <div class="carousel-item">
+                    لا تتردد بالتواصل معنا فنحن هنا لنساعدك على إيجاد كل ما تحتاج له
+                </div>
+                <div class="carousel-item">
+                    ان كنت تبحث عن سكن أو جولة سياحية لتقضي أفضل الأوقات فقد وجدت طلبك
+                </div>
+            </div>
+            <button class="carousel-control-prev d-none d-md-block"  type="button" data-bs-target="#carousel-about-us" data-bs-slide="prev">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carousel-about-us" data-bs-slide="next">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
         </div>
     </header>
 
@@ -109,7 +126,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="card text-center">
-                        <img src="./images/trip1.jpg" class="card-img-top" alt="">
+                        <div class="image">
+                            <img src="./images/trip1.jpg" class="card-img-top" alt="">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title"> رحلة إلى مدينة إسطنبول في تركيا </h5>
                             <div class="card-footer">
@@ -124,7 +143,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card text-center">
-                        <img src="./images/trip2.jpg" class="card-img-top" alt="">
+                        <div class="image">
+                            <img src="./images/trip2.jpg" class="card-img-top" alt="">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">رحلة إلى الأهرامات في مصر</h5>
                             <div class="card-footer">
